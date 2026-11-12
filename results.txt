@@ -1,0 +1,21 @@
+EXPERIMENTAL RESULTS (verified by compiling and running the supplied C programs with GCC)
+Dataset: 30 unique books, inserted in the same ascending order.
+Hash table size: 40; hash function: BookID % 40.
+Height convention: number of nodes on the longest root-to-leaf path (empty tree = 0).
+
+Before the additional Book ID 250 insertion:
+BST successful search (115): 4 key comparisons
+BST unsuccessful search (999): 30 key comparisons
+BST height: 30
+AVL successful search (115): 3 key comparisons
+AVL unsuccessful search (999): 5 key comparisons
+AVL height: 5
+Hash successful search (115): 1 probes
+Hash unsuccessful search (999): 1 probes
+Hash insertion collisions: 41
+
+Additional insertion test: Book ID 250, DSA Advanced, John Smith.
+Run each program, choose option 4, and record its insertion confirmation.
+For a fair comparison, the search/height/collision measurements above are taken before inserting ID 250.
+Collision definition: each occupied slot encountered while inserting a new unique key counts as one collision.
+Probe definition: each table slot inspected during a search counts as one probe.
